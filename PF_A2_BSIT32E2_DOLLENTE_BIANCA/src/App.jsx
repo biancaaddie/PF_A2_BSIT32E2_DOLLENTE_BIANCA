@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./features.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import ColumnsWithIcons from "./components/ColumnsWithIcons.jsx";
+import HangingIcons from "./components/HangingIcons.jsx";
+import CustomCards from "./components/CustomCards.jsx";
+import IconGrid from "./components/IconGrid.jsx";
+import FeaturesWithTitle from "./components/FeaturesWithTitle.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <main>
+      <h1 className="visually-hidden">Features examples</h1>
+
+      <ColumnsWithIcons />
+      <div className="b-example-divider"></div>
+
+      <HangingIcons />
+      <div className="b-example-divider"></div>
+
+      <CustomCards />
+      <div className="b-example-divider"></div>
+
+      <IconGrid />
+
+      <FeaturesWithTitle />
+
+    </main>
+  );
 }
 
-export default App
+export default App;
